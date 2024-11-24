@@ -1,0 +1,158 @@
+.number-list {
+    margin: 1rem auto;
+    max-width: 1200px; 
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  mat-header-row,
+  mat-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-header-cell,
+  mat-cell {
+    flex: 1;
+    padding: 12px 8px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  mat-header-cell {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  mat-cell {
+    border-bottom: 1px solid #eee;
+  }
+  
+  mat-header-cell.mat-sort-header-container {
+    cursor: pointer;
+  }
+  
+ 
+  button.mat-button {
+    font-size: 0.875rem;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button.mat-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .number-list {
+      padding: 0.5rem;
+    }
+  
+    mat-header-cell,
+    mat-cell {
+      font-size: 0.875rem;
+    }
+  
+    button.mat-button {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    mat-header-cell,
+    mat-cell {
+      font-size: 0.75rem;
+      padding: 8px 4px;
+    }
+  
+    button.mat-button {
+      padding: 2px 4px;
+      font-size: 0.7rem;
+    }
+  }
+
+  .striped-row {
+    background-color: #ececec;
+}
+.no-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #555; 
+    background-color: #fdfdfd; 
+    border: 2px dashed #ccc; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .no-rows:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+ 
+  .no-rows i {
+    font-size: 3rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+  }
+
+
+  .filter-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem; 
+  }
+  
+  .search-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mat-form-field {
+    flex: 1;
+  }
+  
+  button {
+    margin-left: 8px;
+  }
+
+  h1{
+    text-align: center
+  }
+  .header {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1976d2; 
+    margin-bottom: 1rem;
+  }
+  
+  

@@ -1,0 +1,45 @@
+<div>
+    <h1 class="header">Phone Number Dashboard</h1>
+</div>
+<div class="number-list">
+    <div class="filter-container">
+        <app-filter (filterChange)="onFilterChange($event)"></app-filter>
+        
+        <mat-form-field class="search-field">
+          <input matInput type="search" placeholder="Search phone number" #filter (keyup.enter)="filterResults(filter.value)">
+          <button matSuffix mat-icon-button aria-label="Search" (click)="filterResults(filter.value)">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th>
+              <td mat-cell *matCellDef="let number"> {{ number.number }} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+              <td mat-cell *matCellDef="let number">
+                <mat-slide-toggle
+                [checked]="number.status === 'active'"
+                (change)="onStatusChange(number, $event.checked)">
+                {{ number.status }}
+              </mat-slide-toggle>
+              </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="messages">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Message Count </th>
+              <td mat-cell *matCellDef="let number"> {{ number.messages }} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns; let odd = odd; " [class.striped-row]="odd"></tr>
+          </table>
+          <div *ngIf="dataSource?.filteredData?.length === 0;" class="no-rows">
+            <i class="material-icons">info</i>
+            No rows to show
+          </div>
+  </div>
+  
